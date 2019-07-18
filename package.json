@@ -1,0 +1,32 @@
+{
+   "name": "service",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "kill-port": "^1.5.1",
+      "nodemon": "^1.19.1",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "apollo-server-koa": "^2.7.0",
+      "graphql": "^14.4.2",
+      "koa": "^2.7.0",
+      "koa-router": "^7.4.0",
+      "mysql": "^2.14.1",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.18"
+   },
+   "scripts": {
+      "start": "nodemon",
+      "build": "tsc -p ./tsconfig.json",
+      "dev": "nodemon src/index.ts",
+      "dev:debug": "kill-port --port 9229 && nodemon",
+      "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
+      "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "migration:down": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+      "migration:status": "ts-node ./node_modules/typeorm/cli.js migration:show",
+      "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create -n"
+   }
+}
