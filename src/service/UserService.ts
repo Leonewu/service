@@ -2,19 +2,17 @@
 import { User } from '../entity/User'
 import { getManager, getRepository  } from 'typeorm'
 import { Context } from 'koa'
-import { RestController } from '../decorator/class'
 
-// @RestController({prefix: ''})
-class UserController {
+class UserService {
   name: string;
   constructor(name: string) {
     this.name = name;
   }
-  async rename(id: number, name: string) {
+  static async rename(id: number, name: string) {
     const repository = getManager().getRepository(User);
     return 123;
   }
-  async add(name: string, age: number, firstName: string) {
+  static async add(name: string, age: number, firstName: string) {
     console.log('name', name);
     console.log('age', age);
     console.log('firstName', firstName);
@@ -25,10 +23,10 @@ class UserController {
     const newUser = await repository.save(user);
     return newUser
   }
-  getAll(name: string) {
+  static getAll(name: string) {
     console.log('getall', name)
     return getRepository(User).find();
   }
 }
 
-export default UserController
+export default UserService

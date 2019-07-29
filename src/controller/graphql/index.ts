@@ -1,10 +1,10 @@
 import user from './user'
 import permission from './permission'
-import ResolverController from './ResolverController'
+import Resolver from './Resolver'
 const src = [user, permission]
 const resolvers = src.reduce((acc, cur) => {
   // 包一层，不然会报类型问题
-  const resolver = new ResolverController(cur)
+  const resolver = new Resolver(cur)
   for (const query in resolver.Query) {
     acc.Query[query] = resolver.Query[query]
   }
@@ -12,7 +12,7 @@ const resolvers = src.reduce((acc, cur) => {
     acc.Mutation[mutation] = resolver.Mutation[mutation]
   }
   return acc
-}, new ResolverController())
+}, new Resolver())
 
 
 export default resolvers

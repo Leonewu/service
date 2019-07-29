@@ -8,8 +8,9 @@
 ## 技术选型（typeorm 和 sequlize）
 1. 对比两者支持的数据库，sequlize 不支持mongondb，但是我以后可能会用mongodb
 2. 对比语法，sequlize有点啰嗦，比较喜欢类似于java清晰的注解，另外以后也可能会用到ts
-3. 对比migration，按照官方文档，typeorm我可以直接写sql语句，比较符合习惯
+3. 对比migration，按照官方文档，typeorm我可以直接写sql语句，比较符合习惯  
 <!-- （虽然typeorm可以将createConection在启动的时候连接，用的时候getConection就可以了）   -->
+4. 项目分层(controller层有restful和graphql)
 ## 为什么不用egg，nest之类的框架  
 1. 刚开始做，想踩一点坑，而且也想深入了解一下koa
 ## 搭建过程
@@ -55,6 +56,9 @@ Starting inspector on 127.0.0.1:9229 failed: address already in use
 用了kill-port，但还是没用，每次都会有端口已占用的报错，虽然没什么影响
 ## 关于migration  
 如果设置了synchronize: true ,在重启服务的时候会自动同步表结构
+## api-key
+61c8b173-422f-4301-a71c-02d8a259480c
+je65vd
 ## 参考文档
 1. [typeorm doc](http://typeorm.cn)  
 2. [sequlize doc](http://docs.sequelizejs.com/manual/migrations.html)  

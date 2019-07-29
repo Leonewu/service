@@ -1,6 +1,6 @@
 
 /* resolver的类，由于有些resolver，部分有mutation，部分没有mutation，这样的话类型不统一 */
-export default class ResolverController {
+export default class Resolver {
   constructor(resolver?: object) {
     if (resolver) {
       this.setResolver(resolver)

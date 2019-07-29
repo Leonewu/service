@@ -3,14 +3,14 @@ import { Permission } from '../entity/Permission'
 import { getManager, getRepository } from 'typeorm'
 import { Context } from 'koa'
 
-class PermissionController {
+class PermissionService {
   constructor() {
   }
-  async rename(id: number, name: string) {
+  static async rename(id: number, name: string) {
     const repository = getManager().getRepository(Permission);
     return 123;
   }
-  async add(name: string, age: number, firstName: string) {
+  static async add(name: string, age: number, firstName: string) {
     console.log('name', name);
     console.log('age', age);
     console.log('firstName', firstName);
@@ -21,9 +21,9 @@ class PermissionController {
     const newPermission = await repository.save(permission);
     return newPermission
   }
-  getAll() {
+  static getAll() {
     return getRepository(Permission).find();
   }
 }
 
-export default PermissionController
+export default PermissionService
