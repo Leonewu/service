@@ -1,93 +1,93 @@
-import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import {Column, Entity, PrimaryGeneratedColumn} from "typeorm"
 
 @Entity()
 export class User {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    private id: number
 
     @Column()
-    name: string;
+    private name: string
 
     @Column()
-    temperament: string;
+    private temperament: string
+
+    @Column({name: "life_span"})
+    private lifeSpan: string
+
+    @Column({name: "alt_names"})
+    private altNames: string
+
+    @Column({name: "wikipedia_url"})
+    private wikipediaUrl: string
 
     @Column()
-    life_span: string;
+    private origin: string
+
+    @Column({name: "weight_imperial"})
+    private weightImperial: string
 
     @Column()
-    alt_names: string;
+    private experimental: number
 
     @Column()
-    wikipedia_url: string;
+    private hairless: number
 
     @Column()
-    origin: string;
+    private natural: number
 
     @Column()
-    weight_imperial: string;
+    private rare: number
 
     @Column()
-    experimental: number;
+    private rex: number
+
+    @Column({name: "suppress_tail"})
+    private suppressTail: number
+
+    @Column({name: "short_legs"})
+    private shortLegs: number
 
     @Column()
-    hairless: number;
+    private hypoallergenic: number
 
     @Column()
-    natural: number;
+    private adaptability: number
+
+    @Column({name: "affection_level"})
+    private affectionLevel: number
+
+    @Column({name: "country_code"})
+    private countryCode: string
+
+    @Column({name: "child_friendly"})
+    private childFriendly: number
+
+    @Column({name: "dog_friendly"})
+    private dogFriendly: number
+
+    @Column({name: "energy_level"})
+    private energyLevel: number
 
     @Column()
-    rare: number;
+    private grooming: number
+
+    @Column({name: "health_issues"})
+    private healthIssues: number
 
     @Column()
-    rex: number;
+    private intelligence: number
+
+    @Column({name: "shedding_level"})
+    private sheddingLevel: number
+
+    @Column({name: "social_needs"})
+    private socialNeeds: number
+
+    @Column({name: "stranger_friendly"})
+    private strangerFriendly: number
 
     @Column()
-    suppress_tail: number;
-
-    @Column()
-    short_legs: number;
-
-    @Column()
-    hypoallergenic: number;
-
-    @Column()
-    adaptability: number;
-
-    @Column()
-    affection_level: number;
-
-    @Column()
-    country_code: string;
-    
-    @Column()
-    child_friendly: number;
-
-    @Column()
-    dog_friendly: number;
-
-    @Column()
-    energy_level: number;
-
-    @Column()
-    grooming: number;
-
-    @Column()
-    health_issues: number;
-
-    @Column()
-    intelligence: number;
-
-    @Column()
-    shedding_level: number;
-
-    @Column()
-    social_needs: number;
-
-    @Column()
-    stranger_friendly: number;
-
-    @Column()
-    vocalisation: number;
+    private vocalisation: number
 
 }

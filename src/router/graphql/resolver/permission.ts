@@ -1,5 +1,4 @@
-import { gql } from 'apollo-server-koa'
-import PermissionController from '../../../controller/PermissionController'
+import PermissionController from "../../../controller/PermissionController"
 
 const resolver = {
   Query: {

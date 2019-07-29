@@ -1,13 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column} from "typeorm";
+import { Column, Entity, PrimaryGeneratedColumn} from "typeorm"
 
 @Entity()
 export class Permission {
     @PrimaryGeneratedColumn()
-    id: number;
+    public id: number
 
     @Column()
-    permission: string;
+    public permission: string
 
     @Column()
-    state: boolean
+    public state: boolean
 }

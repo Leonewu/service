@@ -1,10 +1,7 @@
-import user from './user'
-import permission from './permission'
-import { gql } from 'apollo-server-koa'
+import permission from "./permission"
+import user from "./user"
 
 const schema = [ user, permission ]
-
-// const schema = src.map(v => gql`${v}`)
 
 
 export default schema

@@ -1,8 +1,8 @@
-import PermissionService from '../service/PermissionService'
+import PermissionService from "../service/PermissionService"
 
 export default class PermissionController {
 
-  static fetchPermissions() {
+  public static fetchPermissions() {
     return PermissionService.getAll()
   }
 

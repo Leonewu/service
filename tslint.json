@@ -24,13 +24,29 @@
       "semicolon": [
         true,
         "never"
+      ],
+      "object-literal-sort-keys": false,
+      "trailing-comma": [
+        true,
+        {
+          "multiline": "never",
+          "singleline": "never"
+        }
+      ],
+      "whitespace": [
+        true,
+        "check-branch",
+        "check-operator",
+        "check-typecast",
+        "check-separator"
       ]
     },
     "linterOptions": {
       // 排除的文件
       "exclude": [
         "build/**/*.js",
-        "node_modules/**"
+        "node_modules/**",
+        "src/migration/**"
       ]
     }
   }

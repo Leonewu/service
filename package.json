@@ -26,6 +26,7 @@
       "dev": "nodemon src/index.ts",
       "dev:debug": "kill-port --port 9229 && nodemon",
       "tslint": "tslint ./tslint.json",
+      "tslint:fix": "tslint --fix src/**/*.ts",
       "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
       "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
       "migration:down": "ts-node ./node_modules/typeorm/cli.js migration:revert",

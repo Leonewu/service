@@ -1,6 +1,6 @@
-import schema from './graphql/schema'
-import resolvers from './graphql/resolver'
-import router from './restful'
+import resolvers from "./graphql/resolver"
+import schema from "./graphql/schema"
+import router from "./restful"
 
 export {
   router, schema, resolvers

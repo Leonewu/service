@@ -1,4 +1,3 @@
-import { gql } from 'apollo-server-koa'
 
 export default `
   type Permission {
