@@ -25,7 +25,7 @@
       "build": "tsc -p ./tsconfig.json",
       "dev": "nodemon src/index.ts",
       "dev:debug": "kill-port --port 9229 && nodemon",
-      "tslint": "tslint ./tslint.json",
+      "tslint": "tslint -p .",
       "tslint:fix": "tslint --fix src/**/*.ts",
       "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
       "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run",

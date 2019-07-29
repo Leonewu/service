@@ -27,6 +27,8 @@
 8. 热更新  
 安装nodemon `npm install --save-dev nodemon`  
 配置nodemon.json，大致上是监听src下的文件ts和js文件变化，重新在内存编译  
+9. tslint  
+配置rules和vscode的autoFixOnSave
 ## 项目部署  
 1. 安装pm2  
 `npm i pm2 -g`  
@@ -66,4 +68,5 @@ je65vd
 4. [nodemon doc](https://github.com/remy/nodemon#nodemon)  
 5. [Node.js with TypeScript, Debug inside VSCode and Nodemon](https://dev.to/oieduardorabelo/nodejs-with-typescript-debug-inside-vscode-and-nodemon-23o7)  
 6. [using --inspect crashes on restart](https://github.com/JacksonGariety/gulp-nodemon/issues/139)  
-7. [vscode launch.json](https://code.visualstudio.com/docs/editor/debugging)
+7. [vscode launch.json](https://code.visualstudio.com/docs/editor/debugging)  
+8. [TSlint](https://palantir.github.io/tslint/)
