@@ -8,9 +8,7 @@ import * as KoaBody from 'koa-body'
 
 import * as fs from 'fs'
 import * as path from 'path'
-import schema from './router/graphql'
-import resolvers from './controller/graphql'
-import { router } from './router'
+import { router, resolvers, schema } from './router'
 
 // 集中处理错误
 const handler = async (ctx, next) => {

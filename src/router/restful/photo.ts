@@ -1,7 +1,7 @@
 import * as Router from 'koa-router'
-import PhotoService from '../../service/PhotoService'
+import PhotoController from '../../controller/PhotoController'
 
 const router = new Router()
-router.post('/upload', PhotoService.upload)
+router.post('/upload', PhotoController.upload)
 
 export default router
