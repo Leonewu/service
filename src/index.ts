@@ -1,24 +1,18 @@
 import "reflect-metadata";
-import {createConnection} from "typeorm";
+import { createConnection } from "typeorm";
 import * as Koa from "koa";
-import * as Router from 'koa-router'
-import { ApolloServer, gql } from 'apollo-server-koa'
-const app = new Koa();
+import { ApolloServer } from 'apollo-server-koa'
 import * as KoaBody from 'koa-body'
-
-import * as fs from 'fs'
-import * as path from 'path'
 import { router, resolvers, schema } from './router'
 
-// 集中处理错误
+const app = new Koa();
 const handler = async (ctx, next) => {
-  // log request URL:
   ctx.set("Access-Control-Allow-Origin", "*");
   ctx.set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
   ctx.set("Access-Control-Max-Age", "3600");
   ctx.set("Access-Control-Allow-Headers", "x-requested-with,Authorization,Content-Type,Accept");
   ctx.set("Access-Control-Allow-Credentials", "true");
-  if (ctx.request.method == "OPTIONS") {
+  if (ctx.request.method === "OPTIONS") {
     ctx.response.status = 200
   }
   console.log(`Process ${ctx.request.method} ${ctx.request.url}`);
@@ -53,9 +47,6 @@ createConnection().then(async connection => {
     app.listen({ port: 4000 }, () => {
       console.log(`🚀 Server ready at ${server.graphqlPath}`);
     })
-
-    /* rest route */
-    
   }).catch(error => console.log(error));
 
 

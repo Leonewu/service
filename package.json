@@ -7,7 +7,8 @@
       "kill-port": "^1.5.1",
       "nodemon": "^1.19.1",
       "ts-node": "3.3.0",
-      "typescript": "3.3.3333"
+      "tslint": "^5.18.0",
+      "typescript": "^3.5.3"
    },
    "dependencies": {
       "apollo-server-koa": "^2.7.0",
@@ -24,6 +25,7 @@
       "build": "tsc -p ./tsconfig.json",
       "dev": "nodemon src/index.ts",
       "dev:debug": "kill-port --port 9229 && nodemon",
+      "tslint": "tslint ./tslint.json",
       "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
       "migration:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
       "migration:down": "ts-node ./node_modules/typeorm/cli.js migration:revert",
