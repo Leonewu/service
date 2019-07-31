@@ -19,7 +19,9 @@
       "align": [
         true,
         "parameters",
-        "statements"
+        "statements",
+        "elements",
+        "members"
       ],
       "semicolon": [
         true,

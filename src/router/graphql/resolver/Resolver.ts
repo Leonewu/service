@@ -12,10 +12,10 @@ export default class Resolver {
     }
   }
   public setResolver(resolver: any) {
-    if (resolver && resolver.Query) {
+    if (resolver && resolver.Query && Object.keys(resolver.Query).length) {
       this.Query = resolver.Query
     }
-    if (resolver && resolver.Mutation) {
+    if (resolver && resolver.Mutation && Object.keys(resolver.Mutation).length) {
       this.Mutation = resolver.Mutation
     }
   }

@@ -16,16 +16,16 @@ const handler = async (ctx, next) => {
     ctx.response.status = 200
   }
   console.log(`Process ${ctx.request.method} ${ctx.request.url}`)
-  try {
-    await next()
-    console.log("handler通过")
-  } catch (err) {
-    console.log("handler处理错误")
-    ctx.response.status = err.statusCode || err.status || 500
-    ctx.response.body = {
-      message: err.message
-    }
-  }
+  // try {
+  await next()
+  console.log("handler通过")
+  // } catch (err) {
+  //   console.log("handler处理错误")
+  //   ctx.response.status = err.statusCode || err.status || 500
+  //   ctx.response.body = {
+  //     message: err.message
+  //   }
+  // }
 }
 
 app.use(handler)

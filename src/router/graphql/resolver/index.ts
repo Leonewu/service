@@ -1,7 +1,9 @@
+import folder from "./folder"
 import permission from "./permission"
+import photo from "./photo"
 import Resolver from "./Resolver"
 import user from "./user"
-const src = [user, permission]
+const src = [user, permission, folder, photo]
 const resolvers = src.reduce((acc, cur) => {
   // 包一层，不然会报类型问题
   const resolver = new Resolver(cur)

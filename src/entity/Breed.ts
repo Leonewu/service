@@ -12,19 +12,19 @@ export class User {
     @Column()
     private temperament: string
 
-    @Column({name: "life_span"})
+    @Column()
     private lifeSpan: string
 
-    @Column({name: "alt_names"})
+    @Column()
     private altNames: string
 
-    @Column({name: "wikipedia_url"})
+    @Column()
     private wikipediaUrl: string
 
     @Column()
     private origin: string
 
-    @Column({name: "weight_imperial"})
+    @Column()
     private weightImperial: string
 
     @Column()
@@ -42,10 +42,10 @@ export class User {
     @Column()
     private rex: number
 
-    @Column({name: "suppress_tail"})
+    @Column()
     private suppressTail: number
 
-    @Column({name: "short_legs"})
+    @Column()
     private shortLegs: number
 
     @Column()
@@ -54,37 +54,37 @@ export class User {
     @Column()
     private adaptability: number
 
-    @Column({name: "affection_level"})
+    @Column()
     private affectionLevel: number
 
-    @Column({name: "country_code"})
+    @Column()
     private countryCode: string
 
-    @Column({name: "child_friendly"})
+    @Column()
     private childFriendly: number
 
-    @Column({name: "dog_friendly"})
+    @Column()
     private dogFriendly: number
 
-    @Column({name: "energy_level"})
+    @Column()
     private energyLevel: number
 
     @Column()
     private grooming: number
 
-    @Column({name: "health_issues"})
+    @Column()
     private healthIssues: number
 
     @Column()
     private intelligence: number
 
-    @Column({name: "shedding_level"})
+    @Column()
     private sheddingLevel: number
 
-    @Column({name: "social_needs"})
+    @Column()
     private socialNeeds: number
 
-    @Column({name: "stranger_friendly"})
+    @Column()
     private strangerFriendly: number
 
     @Column()

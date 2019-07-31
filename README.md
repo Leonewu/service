@@ -60,7 +60,9 @@ Starting inspector on 127.0.0.1:9229 failed: address already in use
 如果设置了synchronize: true ,在重启服务的时候会自动同步表结构
 ## api-key
 61c8b173-422f-4301-a71c-02d8a259480c
-je65vd
+je65vd  
+## 开发注意事项  
+1. 数据流: router(接口入口) -> controller(处理接口参数，调用相应service) -> service(只负责纯粹的输入和输出函数)
 ## 参考文档
 1. [typeorm doc](http://typeorm.cn)  
 2. [sequlize doc](http://docs.sequelizejs.com/manual/migrations.html)  
