@@ -7,9 +7,7 @@ export default class FolderController {
     return FolderService.createFolder(name, parentId)
   }
 
-  public static fetchFolders(_, args) {
-    console.log(123)
+  public static fetchFolders() {
     return FolderService.fetchFolders()
   }
-
 }

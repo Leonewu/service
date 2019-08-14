@@ -47,5 +47,8 @@ createConnection().then(async (connection) => {
   app.listen({ port: 4000 }, () => {
       console.log(`🚀 Server ready at ${server.graphqlPath}`)
     })
-  }).catch((error) => console.log(error))
+  }).catch((err) => {
+    console.log(err)
+    console.log(123)
+  })
 

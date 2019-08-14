@@ -1,12 +1,16 @@
-import UserController from "../../../controller/UserController"
+import UserService from "../../../service/UserService"
 
 
 const resolver = {
   Query: {
-    fetchUsers: UserController.fetchUsers
+    fetchUsers: (name: string) => {
+      return UserService.getAll(name)
+  }
   },
   Mutation: {
-    addUser: UserController.addUser
+    addUser: (parent: any, { name, age, firstName }, { dataSource }) => {
+      return UserService.add(name, age, firstName)
+    }
   }
 }
 

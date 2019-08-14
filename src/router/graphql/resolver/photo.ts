@@ -1,4 +1,3 @@
-import PhotoController from "../../../controller/PhotoController"
 
 const resolver = {
   Query: {

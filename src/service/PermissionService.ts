@@ -20,7 +20,8 @@ class PermissionService {
     return newPermission
   }
   public static getAll() {
-    return getRepository(Permission).find()
+    console.log(1234)
+    // return getRepository(Permission).find()
   }
 }
 

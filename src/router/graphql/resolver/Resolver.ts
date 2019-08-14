@@ -14,9 +14,13 @@ export default class Resolver {
   public setResolver(resolver: any) {
     if (resolver && resolver.Query && Object.keys(resolver.Query).length) {
       this.Query = resolver.Query
+    } else {
+      this.Query = {}
     }
     if (resolver && resolver.Mutation && Object.keys(resolver.Mutation).length) {
       this.Mutation = resolver.Mutation
+    } else {
+      this.Mutation = {}
     }
   }
 }

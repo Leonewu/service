@@ -1,8 +1,8 @@
-import PermissionController from "../../../controller/PermissionController"
+import PermissionService from "../../../service/PermissionService"
 
 const resolver = {
   Query: {
-    fetchPermissions: PermissionController.fetchPermissions
+    fetchPermissions: PermissionService.getAll
   }
 }
 

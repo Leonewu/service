@@ -1,11 +1,16 @@
-import FolderController from "../../../controller/FolderController"
+import FolderService from "../../../service/FolderService"
 
 const resolver = {
   Query: {
-    fetchFolders: FolderController.fetchFolders
+    fetchFolders: (_, args) => {
+    const { name, parentId } = args
+    return FolderService.createFolder(name, parentId)
+  }
   },
   Mutation: {
-    createFolder: FolderController.createFolder
+    createFolder: () => {
+    return FolderService.fetchFolders()
+  }
   }
 }
 
