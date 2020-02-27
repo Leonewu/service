@@ -1,20 +1,23 @@
-import {Column, Entity, PrimaryGeneratedColumn} from "typeorm"
+import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm"
 
 @Entity()
-export class User {
+export default class User {
 
     @PrimaryGeneratedColumn()
     public id: number
 
-    @Column()
-    public firstName: string
+    @Column({default: ""})
+    public nickname: string
 
     @Column()
-    public lastName: string
+    public openId: string
 
-    @Column()
-    public age1: number
+    @Column({ type: "varchar", length: 11, default: ""})
+    public phone: string
 
-    @Column()
-    public age23: number
+    @CreateDateColumn()
+    public createdAt: string
+
+    @UpdateDateColumn()
+    public updatedAt: string
 }

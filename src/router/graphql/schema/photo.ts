@@ -7,4 +7,10 @@ export default `
     createdAt: String
     updatedAt: String
   }
+  type Query {
+    _empty: String
+  }
+  type Mutation {
+    _empty: String
+  }
 `

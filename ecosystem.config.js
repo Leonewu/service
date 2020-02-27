@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name: 'pet-api',
+    name: 'cookbook',
     // 指定解释器
     script: './build/index.js',
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/

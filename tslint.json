@@ -41,7 +41,8 @@
         "check-operator",
         "check-typecast",
         "check-separator"
-      ]
+      ],
+    "no-shadowed-variable": false
     },
     "linterOptions": {
       // 排除的文件

@@ -3,6 +3,7 @@
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
+      "@types/graphql": "^14.5.0",
       "@types/node": "^8.0.29",
       "kill-port": "^1.5.1",
       "nodemon": "^1.19.1",
@@ -11,17 +12,23 @@
       "typescript": "^3.5.3"
    },
    "dependencies": {
+      "apollo-server-express": "^2.9.16",
       "apollo-server-koa": "^2.7.0",
+      "axios": "^0.19.1",
+      "express": "^4.17.1",
       "graphql": "^14.4.2",
+      "jsonwebtoken": "^8.5.1",
       "koa": "^2.7.0",
       "koa-body": "^4.1.0",
       "koa-router": "^7.4.0",
       "mysql": "^2.14.1",
+      "redis": "^2.8.0",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.18"
+      "typeorm": "0.2.18",
+      "winston": "^3.2.1"
    },
    "scripts": {
-      "start": "nodemon",
+      "start": "set NODE_ENV=development && nodemon",
       "build": "tsc -p ./tsconfig.json",
       "dev": "nodemon src/index.ts",
       "dev:debug": "kill-port --port 9229 && nodemon",

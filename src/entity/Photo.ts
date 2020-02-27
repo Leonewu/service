@@ -1,7 +1,7 @@
 import {Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn} from "typeorm"
 
 @Entity()
-export default class Folder {
+export default class Photo {
 
     @PrimaryGeneratedColumn()
     public id: number

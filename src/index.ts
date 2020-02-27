@@ -1,8 +1,10 @@
-import { ApolloServer } from "apollo-server-koa"
-import * as Koa from "koa"
-import * as KoaBody from "koa-body"
+// import { ApolloServer } from "apollo-server-koa"
+const { ApolloServer } = require("apollo-server-koa")
+import Koa from "koa"
+import KoaBody from "koa-body"
 import "reflect-metadata"
 import { createConnection } from "typeorm"
+import "./logger"
 import { resolvers, router, schema } from "./router"
 
 const app = new Koa()
@@ -49,6 +51,5 @@ createConnection().then(async (connection) => {
     })
   }).catch((err) => {
     console.log(err)
-    console.log(123)
   })
 

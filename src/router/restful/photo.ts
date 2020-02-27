@@ -1,6 +1,6 @@
-import * as fs from "fs"
-import * as Router from "koa-router"
-import * as path from "path"
+import fs from "fs"
+import Router from "koa-router"
+import path from "path"
 
 const router = new Router()
 router.post("/upload", (ctx: any, next: any) => {
