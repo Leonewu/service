@@ -13,7 +13,7 @@
    },
    "dependencies": {
       "apollo-server-express": "^2.9.16",
-      "apollo-server-koa": "^2.7.0",
+      "apollo-server-koa": "^2.14.2",
       "axios": "^0.19.1",
       "express": "^4.17.1",
       "graphql": "^14.4.2",
